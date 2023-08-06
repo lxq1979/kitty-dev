@@ -13,17 +13,17 @@ import com.louis.kitty.core.http.HttpResult;
 @RequestMapping("backup")
 public class BackupController {
 
-	@Autowired
-	private BackupService backupService;
-	
+    @Autowired
+    private BackupService backupService;
 
-//	@GetMapping(value="/findrecords")
+
+    //	@GetMapping(value="/findrecords")
 //	public HttpResult findrecords(@RequestParam String id) {
 //		System.out.println("received id:"+id);
 //		return HttpResult.ok(backupService.findById(Long.valueOf(id)));
 //	}
-	@GetMapping(value="/findRecords")
-	public HttpResult findrecords() {
-		return HttpResult.ok(backupService.findAll());
-	}
+    @GetMapping(value = "/findRecords")
+    public HttpResult findrecords() {
+        return HttpResult.ok(backupService.findAll());
+    }
 }
